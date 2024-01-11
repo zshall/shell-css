@@ -1,0 +1,24 @@
+{
+  "name": "shell-css",
+  "version": "1.0.0",
+  "description": "Retro CSS framework in the style of classic operating systems",
+  "scripts": {
+    "build": "parcel build scss/shell.scss",
+    "watch": "parcel watch scss/shell.scss"
+  },
+  "keywords": [
+    "ui-framework",
+    "retro",
+    "operating-system-ui"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "zshall",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "bootstrap": "^5.2.3",
+    "parcel": "^2.8.3"
+  }
+}
