@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell.css</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../dist/shell.css" />
+    <script src="components/shell-doc-theme.js" type="module"></script>
+    <script src="components/shell-doc-color-table.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container pt-4">
+        <div class="window active workspace" id="docWindow">
+            <div class="title-bar">
+                <div class="control-box"></div>
+                Shell.css
+                <div class="maximize" onclick="maximizeDocWindow()"></div>
+                <div class="minimize" onclick="minimizeDocWindow()"></div>
+            </div>
+            <div class="container o-none">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="window d-sticky" style="top: 70px;">
+                            <div class="title-bar">
+                                <div class="control-box"></div>
+                                Navigation
+                            </div>
+                            <div class="p-1">
+                                <ul class="btn-list">
+                                    <li><a href="#about">About the Project</a></li>
+                                    <li><a href="#forms">Forms</a></li>
+                                    <li><a href="#typography">Typography</a></li>
+                                    <li><a href="#windows">Windows</a></li>
+                                    <li><a href="#colors">Colors</a></li>
+                                    <li><a href="#icons">Icons</a></li>
+                                    <li><a href="#menus">Menus and Status Bars</a></li>
+                                    <li><a href="#themes">Themes</a></li>
+                                </ul>
+                                <div class="p-2">
+                                    <div class="frame">
+                                        <div class="frame-title">Choose a theme</div>
+                                        <div class="select-input">
+                                            <select name="theme" id="theme" onchange="changeTheme();">
+                                                <option value="default">Default</option>
+                                                <option value="arizona">Arizona</option>
+                                                <option value="black-leather-jacket">Black Leather Jacket</option>
+                                                <option value="bordeaux">Bordeaux</option>
+                                                <option value="cinnamon">Cinnamon</option>
+                                                <option value="designer">Designer</option>
+                                                <option value="emerald-city">Emerald City</option>
+                                                <option value="fluorescent">Fluorescent</option>
+                                                <option value="hotdog-stand">Hotdog Stand</option>
+                                                <option value="lcd-default-screen-settings">LCD Default Screen Settings</option>
+                                                <option value="lcd-reversed-dark">LCD Reversed Dark</option>
+                                                <option value="lcd-reversed-light">LCD Reversed Light</option>
+                                                <option value="mahogany">Mahogany</option>
+                                                <option value="monochrome">Monochrome</option>
+                                                <option value="ocean">Ocean</option>
+                                                <option value="pastel">Pastel</option>
+                                                <option value="patchwork">Patchwork</option>
+                                                <option value="plasma-power-saver">Plasma Power Saver</option>
+                                                <option value="rugby">Rugby</option>
+                                                <option value="the-blues">The Blues</option>
+                                                <option value="tweed">Tweed</option>
+                                                <option value="valentine">Valentine</option>
+                                                <option value="wingtips">Wingtips</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="window active" id="about">
+                            <div class="title-bar">
+                                About the Project
+                            </div>
+                            <div class="p-3">
+                                <h1>Shell.css</h1>
+                                <p>
+                                    This project attempts to recreate the visual stylings of Windows 3.1 for use on the
+                                    web. Color schemes have been approximated as closely as possible based on the
+                                    appearance settings in the control panel and the system color picker.
+                                </p><p>
+                                    Bootstrap's grid system is utilized to make things responsive, but this is not a
+                                    Bootstrap-specific project; the CSS classes can be used with any framework. Some
+                                    tweaks will likely be required to make everything look right.
+                                </p>
+                            </div>
+                            <div class="window m-3 active bg-A6">
+                                <div class="title-bar">
+                                    Installation
+                                </div>
+                                <div class="container text-F6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="#" class="font-system text-F6 no-underline"><span class="text-B3">npm</span> i shell-css</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="window m-3 active bg-A6">
+                                <div class="title-bar">
+                                    Usage
+                                </div>
+                                <div class="container text-F6">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            &lt;<span class="text-F1">link</span> <span class="text-E1">rel</span>=<span class="text-B4">"stylesheet"</span> <span class="text-E1">href</span>=<span class="text-B4">"node_modules/bootstrap/dist/css/bootstrap-grid.min.css"</span> /&gt;<br />
+                                            &lt;<span class="text-F1">link</span> <span class="text-E1">rel</span>=<span class="text-B4">"stylesheet"</span> <span class="text-E1">href</span>=<span class="text-B4">"node_modules/shell-css/dist/shell.css"</span> /&gt;
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-3">
+                                <p>
+                                    SCSS is used for the source files since it supports nesting and variables. You can build the project using Parcel.
+                                    Check out the GitHub repo for information about setting up a local dev environment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="forms">
+                            <div class="title-bar">
+                                Forms
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="callout mb-3">
+                                            <div>
+                                                <p class="stylized-initial-letter">Use the sample dialog box to build an
+                                                    ice cream sundae.</p>
+                                                <p>Experiment with the different sundae selections. As you make
+                                                    selections, the calorie count for the sundae increases or decreases.
+                                                </p>
+                                                <p>You can learn about the form controls on display here by inspecting
+                                                    element.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="frame">
+                                                    <div class="progress-bar mb-2">
+                                                        <div class="progress-bar-progress" style="width: 10%"></div>
+                                                    </div>
+                                                    <div class="text-center">310 Calories</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="frame">
+                                                    <div class="frame-title">Sundae</div>
+                                                    <div class="form-group">
+                                                        <label class="form-control" for="sundae1">
+                                                            <input type="radio" name="sundae" id="sundae1" value="1"
+                                                                checked>
+                                                            <span class="option-text">Vanilla</span>
+                                                        </label>
+
+                                                        <label class="form-control" for="sundae2">
+                                                            <input type="radio" name="sundae" id="sundae2" value="2">
+                                                            <span class="option-text">Chocolate</span>
+                                                        </label>
+
+                                                        <label class="form-control" for="sundae3">
+                                                            <input type="radio" name="sundae" id="sundae3" value="3">
+                                                            <span class="option-text">Strawberry</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="frame">
+                                                    <div class="frame-title">Amount</div>
+                                                    <label class="form-control" for="amount">
+                                                        <input type="number" min="1" max="10" value="1" id="amount"
+                                                            style="width: 35px;" />
+                                                        Scoops
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="frame">
+                                                    <div class="frame-title">Toppings</div>
+                                                    <div class="form-group">
+                                                        <label class="form-control" for="toppings1">
+                                                            <input type="checkbox" name="toppings" id="toppings1"
+                                                                value="1" checked>
+                                                            <span class="option-text">Chocolate Sauce</span>
+                                                        </label>
+
+                                                        <label class="form-control" for="toppings2">
+                                                            <input type="checkbox" name="toppings" id="toppings2"
+                                                                value="2">
+                                                            <span class="option-text">Nuts</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <div class="frame">
+                                                    <div class="frame-title">Flavor</div>
+                                                    <div class="select-input">
+                                                        <select name="flavor" id="flavor">
+                                                            <option value="1">Banana</option>
+                                                            <option value="2">Blueberry</option>
+                                                            <option value="3">Chocolate</option>
+                                                            <option value="4">Coconut</option>
+                                                            <option value="5">Coffee</option>
+                                                            <option value="6">Lemon</option>
+                                                            <option value="7">Maple</option>
+                                                            <option value="8">Mint</option>
+                                                            <option value="9">Peach</option>
+                                                            <option value="10">Pistachio</option>
+                                                            <option value="11">Strawberry</option>
+                                                            <option value="12">Vanilla</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+</div><div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="window">
+                                            <div class="title-bar">Other Controls</div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="frame">
+                                                            <div class="frame-title">Slider</div>
+                                                            <div class="slider">
+                                                                <input type="range" min="0" max="100" value="50" class="slider-input">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="frame d-flex flex-wrap" style="gap: 0.5rem;">
+                                                            <div class="frame-title">Buttons</div>
+                                                            <button class="btn">Standard button</button>
+                                                            <button class="btn btn-preferred">Preferred button</button>
+                                                            <button class="btn" disabled="disabled">Disabled</button>
+                                                            <button class="btn" title="Icon button"><div class="ico-information"></div></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 mt-2">
+                                        <div class="window">
+                                            <div class="title-bar">Form Example</div>
+                                            <div class="container desktop" style="height: 480px;">
+                                                <div class="row justify-content-center align-items-center" style="height: 80%;">
+                                                    <div class="col-12" style="max-width: 260px;">
+                                                        <div class="window active">
+                                                            <div class="title-bar">Log In</div>
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div class="col-12">
+                                                                        <label class="form-control">
+                                                                            Username
+                                                                            <input type="text" class="form-control" />
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-12 mt-2">
+                                                                        <label class="form-control">
+                                                                            Password
+                                                                            <input type="password" class="form-control" />
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-12 mt-2">
+                                                                        <label class="form-control" for="remember">
+                                                                            <input type="checkbox" name="remember" id="remember" value="1" checked>
+                                                                            <span class="option-text">Remember Me</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="col-12 mt-2">
+                                                                        <button class="btn btn-preferred">Log In</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="typography">
+                            <div class="title-bar">Typography</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h1>Heading 1</h1>
+                                        <h2>Heading 2</h2>
+                                        <h3>Heading 3</h3>
+                                        <h4>Heading 4</h4>
+                                        <h5>Heading 5</h5>
+                                        <h6>Heading 6</h6>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <h1>Fonts</h1>
+                                        <p>We use MS Sans Serif as the default font for headers and paragraphs.</p>
+                                        <div class="pb-2">Unstyled text uses the system font.</div>
+                                        <p>You can override these fonts using the classes:</p>
+                                        <ul>
+                                            <li><code>font-system</code></li>
+                                            <li><code>font-sans-serif</code></li>
+                                            <li><code>font-serif</code></li>
+                                            <li><code>font-monospace</code></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <h1>Links</h1>
+                                        <p>
+                                            Our links are styled in the style of <a href="https://en.wikipedia.org/wiki/WinHelp">WinHelp</a>. Definition links
+                                            are in this style as well. <dfn title="Terms that need further explanation are wrapped in the `dfn` tag.">What's this?</dfn>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="windows">
+                            <div class="title-bar">Windows</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">Inactive Window</div>
+                                            <div class="p-2">
+                                                <p>Windows are the main building blocks of the UI. They can be used to
+                                                    display content, forms, or anything else you can think of.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="window active workspace">
+                                            <div class="title-bar">Active Workspace Window</div>
+                                            <div class="p-2">
+                                                <div class="window active">
+                                                    <div class="title-bar">Active Window</div>
+                                                    <div class="p-2">
+                                                        <p>Windows can be nested inside of other windows.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="colors">
+                            <div class="title-bar">Colors</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <shell-doc-color-table></shell-doc-color-table>
+                                        <p>RGB colors are copied from the default Windows color picker, and are referred
+                                            to by the letters and numbers in this grid.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <shell-doc-color-table dithered="dithered"></shell-doc-color-table>
+                                        <p>Dithered color simulation uses a tiled background image of what the dithered
+                                            color would look like under 16 color mode in Windows 3.1.</p>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <p>You can specify a color using the classes below where <code>XX</code> is a
+                                            location on the grid. For example, A1, C3, D5, H6:</p>
+                                        <ul>
+                                            <li><code>bg-XXr</code></li>
+                                            <li><code>bg-XXd</code></li>
+                                            <li><code>text-XXr</code></li>
+                                            <li><code>text-XXd</code></li>
+                                        </ul>
+                                        <p>Use <code>r</code> for RGB or <code>d</code> for dithered.</p>
+                                        <h1 class="text-F1d">Dithered Text</h1>
+                                        <p>
+                                            Using the <code>text-XXd</code> classes will give you dithered text, however
+                                            this relies on
+                                            <a
+                                                href="https://stackoverflow.com/questions/11924800/use-text-as-a-mask-on-background-image"><code>background-clip</code></a>
+                                            and it isn't always guaranteed to work in all browsers.
+                                        </p>
+
+                                        <div class="callout">
+                                            <i class="ico-information"></i>
+                                            Speaking of not being guaranteed to work, if you find something that doesn't
+                                            work, report it on GitHub!
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="icons">
+                            <div class="title-bar">Icons</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>There are some icons built-in that are available as CSS sprites. These all
+                                            start with <code>ico-</code>.</p>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-exclamation
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-exclamation"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">This is something you should pay
+                                                            attention to!</p>
+                                                        <button class="btn btn-preferred">OK</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-question
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-question"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">This is but a taste of our fury! Do you
+                                                            yield?</p>
+                                                        <button class="btn">Yes</button>
+                                                        <button class="btn btn-preferred">I do not</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-stop
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-stop"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">The retro encabulator is not responding
+                                                            properly. Check your IRQ values and restart your computer.
+                                                        </p>
+                                                        <button class="btn btn-preferred">Oh...</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-information
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-information"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">Remember: licking doorknobs is illegal on
+                                                            other planets.</p>
+                                                        <button class="btn btn-preferred">No, not that!</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-success
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-success"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">Task failed successfully.</p>
+                                                        <button class="btn btn-preferred">OK</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-4 col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">
+                                                <div class="control-box"></div>
+                                                ico-danger
+                                            </div>
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <i class="ico-danger"></i>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <p class="font-system">Bad command or file name.</p>
+                                                        <button class="btn btn-preferred">C:\></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 pt-4">
+                                        <p>These are mostly here for dialog boxes, which are featured above.</p>
+                                        <h1>Icon Lists</h1>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="window">
+                                            <div class="title-bar">Icon list example</div>
+                                            <div class="icon-list o-scroll" style="height: 100px;">
+                                                <div class="icon">
+                                                    <i class="ico-exclamation"></i>
+                                                    <span>exclama~1.ico</span>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="ico-question"></i>
+                                                    <span>question.ico</span>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="ico-stop"></i>
+                                                    <span>stop.ico</span>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="ico-information"></i>
+                                                    <span>informa~1.ico</span>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="ico-success"></i>
+                                                    <span>success.ico</span>
+                                                </div>
+                                                <div class="icon">
+                                                    <i class="ico-danger"></i>
+                                                    <span>danger.ico</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="callout">
+                                            <p class="stylized-initial-letter">
+                                                Your web page or application may want to display a list of links, and
+                                                the <code>icon-list</code> class simulates this. If you're using our
+                                                (under construction) web components, the minimized icons use this to
+                                                display on the desktop.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="menus">
+                            <div class="title-bar">Menus and Status Bars</div>
+                            <ul class="menu-bar">
+                                <li class="menu-item">File</li>
+                                <li class="menu-item">Edit</li>
+                                <li class="menu-item">View</li>
+                                <li class="menu-item">Help</li>
+                            </ul>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>Organize your application using menus. They can be used for navigation, or
+                                            for displaying options. In pure CSS, top-level menu items are all that's
+                                            supported. Using JavaScript however you can show / hide submenus.</p>
+                                        <p>The status bar runs along the bottom of a window and is ideal for showing the
+                                            current status of the application or progress on operations. The progress
+                                            bar element displays smaller in the status bar.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="window" style="height: 200px;">
+                                            <div class="title-bar">
+                                                Submenu example
+                                            </div>
+                                            <ul class="menu-bar">
+                                                <li class="menu-item active">
+                                                    File
+                                                    <ul class="menu">
+                                                        <li class="menu-item">New <span class="shortcut">Ctrl+N</span>
+                                                        </li>
+                                                        <li class="menu-item">Open <span class="shortcut">Ctrl+O</span>
+                                                        </li>
+                                                        <li class="menu-item">Save <span class="shortcut">Ctrl+S</span>
+                                                        </li>
+                                                        <li class="menu-item divider-below">Save As... <span
+                                                                class="shortcut">Ctrl+Shift+S</span></li>
+                                                        <li class="menu-item divider-below">Print <span
+                                                                class="shortcut">Ctrl+P</span></li>
+                                                        <li class="menu-item">Exit <span class="shortcut">Ctrl+Q</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item">Edit</li>
+                                                <li class="menu-item">View</li>
+                                                <li class="menu-item">Help</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p><code>menu-item</code> class elements can have <code>menu</code> class
+                                            elements added on. If the menu item is <code>active</code>, the submenu will
+                                            be displayed below the menu item. Use JavaScript or Web Components to do
+                                            this effectively.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="status-bar">
+                                <div class="status-item" style="width: 80%;">Ready</div>
+                                <div class="status-item progress-bar" style="width: 20%;">
+                                    <div class="progress-bar-progress" style="width: 42%;"></div>
+                                    <div class="progress-bar-text">Reticulating splines...</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="window mt-4" id="themes">
+                            <div class="title-bar">Themes</div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>Themes are applied using the <code>theme-*</code> class. The following themes
+                                            are available:</p>
+                                    </div>
+
+                                    <!-- Themes start -->
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="arizona"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="black-leather-jacket"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="bordeaux"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="cinnamon"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="designer"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="emerald-city"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="fluorescent"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="hotdog-stand"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="lcd-default-screen-settings"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="lcd-reversed-dark"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="lcd-reversed-light"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="mahogany"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="monochrome"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="ocean"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="pastel"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="patchwork"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="plasma-power-saver"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="rugby"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="the-blues"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="tweed"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="valentine"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="windows-default"></shell-doc-theme>
+                                    <shell-doc-theme class="col-xl-4 col-lg-6 mb-2" name="wingtips"></shell-doc-theme>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // on page load, set the theme to the one stored in sessionStorage
+        (function() {
+            if (sessionStorage.getItem('theme') === null) {
+                sessionStorage.setItem('theme', 'default');
+            }
+            document.getElementById('theme').value = sessionStorage.getItem('theme');
+            document.body.className = 'theme-' + sessionStorage.getItem('theme');
+        })();
+
+        function changeTheme() {
+            const theme = document.getElementById('theme').value;
+            sessionStorage.setItem('theme', theme);
+            document.body.className = 'theme-' + theme;
+        }
+
+        function maximizeDocWindow() {
+            document.getElementById('docWindow').classList.toggle('maximized');
+        }
+
+        function minimizeDocWindow() {
+            document.getElementById('docWindow').classList.toggle('minimized');
+        }
+    </script>
+</body>
+
+</html>
