@@ -34,17 +34,17 @@ get up and running.
 
 ## Building from Source
 
-Parcel is used to compile the SCSS. Clone the repository and `npm install`, then `npm run build` or `npm run watch` to
-build any time you make changes to the source files.
+Parcel is used to compile the SCSS. Clone the repository and `npm install`, then `npm run build`.
 
 The `src` folder has styles, icons, etc. while `dist` contains the build output.
 
 ### Viewing the documentation site locally
 
 The documentation site is located in `doc` and links a level up to the compiled CSS output in the `dist` folder.
-Since there isn't any tooling behind the documentation, you can view it without a web server by opening `doc/index.html`
-in a browser. For live reload support you can start a web server instead. I use Visual Studio Code with the
-[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension for instance.
+
+`npm run watch` will start up a server as well as watch the SCSS and let you view all changes to either documentation
+or the project's source. You'll need to do this to get everything running, as it builds an un-minified copy of Shell.css
+and copies it into the documentation site's directory.
 
 ## Resources Used
 

@@ -1,10 +1,17 @@
 {
   "name": "shell-css",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retro CSS framework in the style of classic operating systems",
   "scripts": {
+    "clean:output": "rimraf dist",
+    "prebuild": "npm run clean:output",
     "build": "parcel build src/scss/shell.scss",
-    "watch": "parcel watch src/scss/shell.scss"
+    "postbuild": "node infra/prepend-license.js",
+    "watch:scss:local": "parcel watch --dist-dir doc/generated src/scss/shell.scss",
+    "watch:docs:local": "lite-server --config=infra/browser-sync-config.json",
+    "watch": "concurrently \"npm run watch:scss:local\" \"npm run watch:docs:local\"",
+    "prepublishOnly": "npm run build",
+    "yo": "parcel --version"
   },
   "keywords": [
     "ui-framework",
@@ -17,8 +24,11 @@
   "author": "zshall",
   "license": "MIT",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3",
+    "@parcel/transformer-sass": "^2.11.0",
     "bootstrap": "^5.2.3",
-    "parcel": "^2.8.3"
+    "concurrently": "^8.2.2",
+    "lite-server": "^2.6.1",
+    "parcel": "^2.11.0",
+    "rimraf": "^5.0.5"
   }
 }

@@ -1,2 +1,5 @@
 node_modules/*
 .parcel-cache/*
+
+# generated files during watch
+doc/generated/*
