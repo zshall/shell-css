@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Monochrome
+.theme-monochrome {
+    --desktop: #{palette.$F6};
+    --applicationWorkspace: #{palette.$H6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$A6};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$F6r};
+    --inactiveBorder: #{palette.$F6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$D6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$A6r};
+    --highlightedText: #{palette.$H6r};
+}

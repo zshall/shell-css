@@ -1,0 +1,95 @@
+@use '_theme';
+@use '_buttons';
+@use '_fonts';
+@use '_window';
+
+$selectBoxHeight: 18px;
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: theme.$windowText;
+}
+
+input, select {
+    border: 1px solid theme.$windowFrame;
+    background: theme.$windowBackground;
+    color: theme.$windowText;
+}
+
+.select-input {
+    position: relative;
+
+    select {
+        font-family: fonts.$system;
+        font-size: 16px;
+        width: 100%;
+        height: $selectBoxHeight;
+        padding-right: 16px;
+        appearance: none;
+        padding-left: 5px;
+
+        &:active {
+            border-width: 1px;
+        }
+    }
+
+    &::after {
+        content: '▼';
+        font-size: 9px;
+        @include buttons.buttonBackground;
+        width: 16px;
+        height: $selectBoxHeight - 2px;
+        z-index: 2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+    }
+}
+
+.slider-input {
+    appearance: none;
+    width: 100%;
+    height: window.$controlButtonWidth;
+    background: theme.$scrollBars;
+    outline: none;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: window.$controlButtonWidth;
+        height: window.$controlButtonWidth;
+        @include buttons.buttonBackground;
+        cursor: pointer;
+
+        &:active {
+            @include buttons.buttonShadowInverted;
+        }
+    }
+
+    &::-moz-range-thumb {
+        width: window.$controlButtonWidth;
+        height: window.$controlButtonWidth;
+        background: theme.$buttonFace;
+        @include buttons.buttonBackground;
+        cursor: pointer;
+
+        &:active {
+            @include buttons.buttonShadowInverted;
+        }
+    }
+}
+
+.form-control {
+    display: block;
+
+    .option-text {
+        display: inline-block;
+    }
+
+    &:focus-within .option-text {
+        outline: 1px dotted theme.$windowText;
+    }
+}

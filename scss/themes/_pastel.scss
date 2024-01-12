@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Pastel
+.theme-pastel {
+    --desktop: rgb(130, 255, 192);
+    --applicationWorkspace: #{palette.$B2};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E1};
+    --inactiveTitleBar: #{palette.$H6};
+    --activeTitleBarText: #{palette.$A6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$G1r};
+    --inactiveBorder: #{palette.$H6r};
+    --windowFrame: #{palette.$D6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$E2r};
+    --highlightedText: #{palette.$A6r};
+}

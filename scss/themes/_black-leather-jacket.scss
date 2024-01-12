@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Black Leather Jacket
+.theme-black-leather-jacket {
+    --desktop: #{palette.$A6};
+    --applicationWorkspace: #{palette.$F6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$F6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$H5};
+    --inactiveTitleBar: #{palette.$D6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$D6r};
+    --inactiveBorder: #{palette.$D6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$A6r};
+    --highlightedText: #{palette.$H6r};
+}

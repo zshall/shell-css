@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Patchwork
+.theme-patchwork {
+    --desktop: rgb(187, 68, 149) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAJ1JREFUKFNFj1sOwyAMBNcnDqQKmAsUMCqPC8cVbqT6z5JnvEtvGcrxRJEP0uVQZIGjR64dHBzoJtVSB1LwyDLB0aHWCQ4HcpugLF05vlBkE+ePjB5VBlQVpHRrlmX63B7TNsQDpS5QbkPZ9APp2tr1vOtIl38MdVmgKhPRyIkUnGUiaxE8Suv7GnssS9utTpDi1tIWYviTe2d7N/EFJAlqExzQi3UAAAAASUVORK5CYII=);
+    --applicationWorkspace: rgb(250, 251, 193) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAH5JREFUKFMtj1EKwmAMg790B1YQEU8ggiI78N9IuvUlTZuGVE6RMhoQaXxyuSMopMVg5IoikkKzt4/ZOMXHKE6Dbb++P563K1aBm41i0TCO3XPuuWh0OgwNa7fFNktcB6qw1+ngTqpJnQ/SDT9eSuikTMLYb5jF+7PzuF8QxR9HfFPi5OvkAgAAAABJRU5ErkJggg==);
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E1};
+    --inactiveTitleBar: #{palette.$H6};
+    --activeTitleBarText: #{palette.$A6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: rgb(78, 177, 100);
+    --inactiveBorder: #{palette.$H6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$E2r};
+    --highlightedText: #{palette.$A6r};
+}

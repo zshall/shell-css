@@ -1,0 +1,56 @@
+@use '_theme';
+@use '_window';
+@use '_buttons';
+
+::-webkit-scrollbar {
+    width: window.$controlButtonWidth;
+    height: window.$controlButtonWidth;
+}
+
+::-webkit-scrollbar-track {
+    background: theme.$scrollBars;
+}
+
+::-webkit-scrollbar-thumb {
+    @include buttons.buttonBackground;
+}
+
+::-webkit-scrollbar-button:single-button {
+    @include buttons.buttonBackground;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: window.$controlButtonWidth;
+    height: window.$controlButtonWidth;
+
+    &:active {
+        @include buttons.buttonShadowInverted;
+    }
+
+    &:vertical {
+        // down
+        &:increment {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAAXNSR0IArs4c6QAAADNQTFRFAAAAAAAA/wAAqgBVAP8AAKpV//8AqqpVAACqAAD/qlWq/wD/VaqqAP//hoqOw8fL////hLpVIQAAABF0Uk5TAP////////////////////8QFUChAAAAG0lEQVQImWNgYGAEAgYQwMlghAIYC0UNA5gGAAVqACU+tEfsAAAAAElFTkSuQmCC');
+        }
+
+        // up
+        &:decrement {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAAXNSR0IArs4c6QAAADNQTFRFAAAAAAAA/wAAqgBVAP8AAKpV//8AqqpVAACqAAD/qlWq/wD/VaqqAP//hoqOw8fL////hLpVIQAAABF0Uk5TAP////////////////////8QFUChAAAAH0lEQVQImWNgYGBgZGQAA0ZGCIuREcJiZISx4FI4GQAFRgAlJ5Xr8QAAAABJRU5ErkJggg==');
+        }
+    }
+
+    &:horizontal {
+        // left
+        &:decrement {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAAXNSR0IArs4c6QAAADNQTFRFAAAAAAAA/wAAqgBVAP8AAKpV//8AqqpVAACqAAD/qlWq/wD/VaqqAP//hoqOw8fL////hLpVIQAAABF0Uk5TAP////////////////////8QFUChAAAAHklEQVQImWNgYGBgZIAARkYYDQYwGokBl0IohmoHAAVWACVsXS7DAAAAAElFTkSuQmCC');
+        }
+
+        // right
+        &:increment {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAAXNSR0IArs4c6QAAADNQTFRFAAAAAAAA/wAAqgBVAP8AAKpV//8AqqpVAACqAAD/qlWq/wD/VaqqAP//hoqOw8fL////hLpVIQAAABF0Uk5TAP////////////////////8QFUChAAAAHUlEQVQImWNgAAJGBihgZAQTYABnMGIwkBTDtAMABVoAJUsEhCEAAAAASUVORK5CYII=');
+        }
+    }
+}
+
+::-webkit-resizer, ::-webkit-scrollbar-corner {
+    background: theme.$scrollBars;
+}

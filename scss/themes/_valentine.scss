@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Valentine
+.theme-valentine {
+    --desktop: #{palette.$G1};
+    --applicationWorkspace: #{palette.$H6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$H3};
+    --inactiveTitleBar: #{palette.$G3};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$H6};
+    --activeBorder: #{palette.$G1r};
+    --inactiveBorder: #{palette.$G1r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$H2r};
+    --highlightedText: #{palette.$A6r};
+}

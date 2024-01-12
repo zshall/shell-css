@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Tweed
+.theme-tweed {
+    --desktop: rgb(158, 97, 106);
+    --applicationWorkspace: #{palette.$F6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$C6};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$A3};
+    --inactiveBorder: #{palette.$F6};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$B6};
+    --highlightedText: #{palette.$A6};
+}

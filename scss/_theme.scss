@@ -1,0 +1,65 @@
+@use '_palette';
+
+// TODO: When I designed this CSS I didn't use a CSS reset like Bootstrap's reboot.css.
+// This means that the CSS is not consistent across browsers and when a reset is used
+// the styles don't look quite right.
+$usingResetCss: false;
+
+// Choose the theme here and other files using theme.scss will use the selected one.
+@use 'themes/default';
+@use 'themes/arizona';
+@use 'themes/black-leather-jacket';
+@use 'themes/bordeaux';
+@use 'themes/cinnamon';
+@use 'themes/designer';
+@use 'themes/emerald-city';
+@use 'themes/fluorescent';
+@use 'themes/hotdog-stand';
+@use 'themes/lcd-default-screen-settings';
+@use 'themes/lcd-reversed-dark';
+@use 'themes/lcd-reversed-light';
+@use 'themes/mahogany';
+@use 'themes/monochrome';
+@use 'themes/ocean';
+@use 'themes/pastel';
+@use 'themes/patchwork';
+@use 'themes/plasma-power-saver';
+@use 'themes/rugby';
+@use 'themes/the-blues';
+@use 'themes/tweed';
+@use 'themes/valentine';
+@use 'themes/wingtips';
+
+$desktop: var(--desktop);
+$applicationWorkspace: var(--applicationWorkspace);
+$windowBackground: var(--windowBackground);
+$windowText: var(--windowText);
+$menuBar: var(--menuBar);
+$menuText: var(--menuText);
+$activeTitleBar: var(--activeTitleBar);
+$inactiveTitleBar: var(--inactiveTitleBar);
+$activeTitleBarText: var(--activeTitleBarText);
+$inactiveTitleBarText: var(--inactiveTitleBarText);
+$activeBorder: var(--activeBorder);
+$inactiveBorder: var(--inactiveBorder);
+$windowFrame: var(--windowFrame);
+$scrollBars: var(--scrollBars);
+$buttonFace: var(--buttonFace);
+$buttonShadow: var(--buttonShadow);
+$buttonText: var(--buttonText);
+$buttonHighlight: var(--buttonHighlight);
+$disabledText: var(--disabledText);
+$highlight: var(--highlight);
+$highlightedText: var(--highlightedText);
+
+// Variables for specific elements (to be genericised to themes later)
+$calloutBackground: palette.$B1;
+$calloutText: palette.$A6;
+
+// If bootstrap is used, these variables work with reboot-css
+$controlBoxHeight: 1px;
+$titleBarHeight: 18px;
+@if $usingResetCss {
+    $controlBoxHeight: 3px;
+    $titleBarHeight: 19px;
+}

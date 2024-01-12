@@ -1,0 +1,19 @@
+@use '_theme';
+@use '_palette';
+@use '_fonts';
+
+.callout {
+    background: theme.$calloutBackground;
+    color: theme.$calloutText;
+    border: 1px solid theme.$windowFrame;
+    box-shadow: 4px 4px 0 theme.$buttonShadow;
+    padding: 1rem;
+    font-family: fonts.$sansSerif;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    i {
+        flex: 0 0 32px;
+    }
+}

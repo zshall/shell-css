@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Plasma Power Saver
+.theme-plasma-power-saver {
+    --desktop: #{palette.$A6};
+    --applicationWorkspace: #{palette.$E4};
+    --windowBackground: #{palette.$A6};
+    --windowText: #{palette.$H6};
+    --menuBar: #{palette.$H2};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E5};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$A6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$A4r};
+    --inactiveBorder: #{palette.$H6r};
+    --windowFrame: #{palette.$F6};
+    --scrollBars: #{palette.$E4};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$H6r};
+    --highlightedText: #{palette.$A6r};
+}

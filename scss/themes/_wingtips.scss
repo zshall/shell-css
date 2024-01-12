@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Wingtips
+.theme-wingtips {
+    --desktop: #{palette.$C6};
+    --applicationWorkspace: #{palette.$F6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$D6};
+    --inactiveTitleBar: #{palette.$H6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$B5r};
+    --inactiveBorder: #{palette.$H6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$D6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$D4r};
+    --highlightedText: #{palette.$H6r};
+}

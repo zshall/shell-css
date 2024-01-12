@@ -1,0 +1,49 @@
+/**
+ * Progress Bars
+ */
+
+@use '_theme';
+@use '_fonts';
+@use '_typography';
+
+.progress-bar {
+    background-color: theme.$windowBackground;
+    border: 2px solid theme.$windowFrame;
+    height: 16px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .status-bar &.status-item {
+        height: 13px;
+        border-width: 1px;
+        box-shadow: none;
+    }
+
+    .progress-bar-progress {
+        background-color: theme.$highlight;
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        transition: width 0.2s ease-in-out;
+        z-index: 1;
+    }
+
+    .progress-bar-text {
+        color: theme.$windowText;
+        font-family: fonts.$sansSerif;
+        font-size: 0.8rem;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        @include typography.textInverted;
+    }
+ }

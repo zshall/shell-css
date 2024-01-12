@@ -1,0 +1,16 @@
+@use '_theme';
+
+.frame {
+    margin-bottom: 1rem;
+    border: 2px solid theme.$windowFrame;
+    position: relative;
+    padding: 1rem;
+
+    .frame-title {
+        background: theme.$windowBackground;
+        position: absolute;
+        top: -0.5rem;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+    }
+}

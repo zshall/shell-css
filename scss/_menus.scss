@@ -1,0 +1,118 @@
+@use '_theme';
+@use '_fonts';
+@use '_window';
+@use '_buttons';
+@use '_typography';
+
+.menu-bar, .status-bar {
+    flex: 0 1 window.$controlButtonWidth;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.menu-bar {
+    border-bottom: 1px solid theme.$windowFrame;
+    background: theme.$menuBar;
+    color: theme.$menuText;
+    height: window.$controlButtonWidth;
+    list-style: none;
+    margin: 0;
+
+    .menu-item {
+        padding: 0 0.5rem;
+        height: 100%;
+        a {
+            background: theme.$menuBar;
+            color: theme.$menuText;
+            font-family: fonts.$system;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        a:not([href]) {
+            cursor: default;
+        }
+
+        cursor: default;
+        position: relative;
+        display: block;
+
+        &.disabled {
+            color: theme.$disabledText;
+            pointer-events: none;
+        }
+
+        &.active {
+            background: theme.$highlight;
+            color: theme.$highlightedText;
+
+            .menu {
+                display: flex;
+            }
+        }
+
+        .menu {
+            background: theme.$menuBar !important;
+            color: theme.$menuText;
+            box-shadow: 0 0 0 1px theme.$windowFrame;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: calc(100% + 1px);
+            left: 0;
+            z-index: 5;
+            display: none;
+            flex-direction: column;
+            gap: 1px;
+            min-width: 200px;
+
+            .menu-item {
+                padding: 0.2rem 0.5rem;
+                display: flex;
+                align-items: center;
+                position: relative;
+                gap: 1rem;
+
+                .shortcut {
+                    position: absolute;
+                    right: 0.5rem;
+                }
+
+                &.divider-above {
+                    border-top: 1px solid theme.$windowFrame;
+                }
+
+                &.divider-below {
+                    border-bottom: 1px solid theme.$windowFrame;
+                }
+
+                &:hover, &.active {
+                    background: theme.$highlight;
+                    color: theme.$highlightedText;
+                }
+
+                .menu {
+                    left: 100%;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+.status-bar {
+    background: theme.$buttonFace;
+    color: theme.$buttonText;
+    padding: 2px 0.5rem;
+    gap: 0.5rem;
+    border-top: 1px solid theme.$windowFrame;
+    font-family: fonts.$sansSerif;
+    font-size: 0.8rem;
+
+    .status-item {
+        @include buttons.buttonShadow(1px);
+        padding: 4px;
+    }
+}

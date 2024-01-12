@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Hotdog Stand
+.theme-hotdog-stand {
+    --desktop: #{palette.$B3};
+    --applicationWorkspace: #{palette.$B3};
+    --windowBackground: #{palette.$A2};
+    --windowText: #{palette.$H6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$A6};
+    --inactiveTitleBar: #{palette.$A2};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$H6};
+    --activeBorder: #{palette.$A2r};
+    --inactiveBorder: #{palette.$A2r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$A6r};
+    --highlightedText: #{palette.$H6r};
+}

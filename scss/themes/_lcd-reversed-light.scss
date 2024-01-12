@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: LCD Reversed  Light
+.theme-lcd-reversed-light {
+    --desktop: #{palette.$E5};
+    --applicationWorkspace: #{palette.$H6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E6};
+    --inactiveTitleBar: #{palette.$H6};
+    --activeTitleBarText: #{palette.$A6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$F6r};
+    --inactiveBorder: #{palette.$F6r};
+    --windowFrame: #{palette.$E5};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$E5r};
+    --highlightedText: #{palette.$H6r};
+}

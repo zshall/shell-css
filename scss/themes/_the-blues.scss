@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: The Blues
+.theme-the-blues {
+    --desktop: #{palette.$E3};
+    --applicationWorkspace: #{palette.$F6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E5};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$F6};
+    --inactiveBorder: #{palette.$F6};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$E5};
+    --highlightedText: #{palette.$H6};
+}

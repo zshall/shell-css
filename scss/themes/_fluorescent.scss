@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Fluorescent
+.theme-fluorescent {
+    --desktop: #{palette.$A6};
+    --applicationWorkspace: #{palette.$H6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$C3};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$H2};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$A6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$C2r};
+    --inactiveBorder: #{palette.$F6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$A6r};
+    --highlightedText: #{palette.$H6r};
+}

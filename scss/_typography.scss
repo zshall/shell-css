@@ -1,0 +1,79 @@
+@use '_theme';
+@use '_fonts';
+@use '_palette';
+
+* {
+    font-smooth: never;
+    --webkit-font-smoothing: none;
+}
+
+::selection {
+    background: theme.$highlight;
+    color: theme.$highlightedText;
+}
+
+body {
+    font-family: fonts.$system;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-top: 0;
+    font-family: fonts.$sansSerif;
+}
+
+.font-system {
+    font-family: fonts.$system;
+}
+
+.font-sans-serif {
+    font-family: fonts.$sansSerif;
+}
+
+.font-serif {
+    font-family: fonts.$serif;
+}
+
+.font-monospace {
+    font-family: fonts.$monospace;
+}
+
+code {
+    font-family: fonts.$monospace;
+}
+
+dfn {
+    font-family: fonts.$sansSerif;
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: palette.$D4r;
+    cursor: help;
+}
+
+a {
+    font-family: fonts.$sansSerif;
+    color: palette.$D4r;
+
+    &.no-underline {
+        text-decoration: none;
+    }
+}
+
+.stylized-initial-letter::first-letter {
+    initial-letter: 2;
+    font-family: fonts.$serif;
+    text-shadow: 1px 1px 0px theme.$buttonShadow;
+}
+
+@mixin textInverted {
+    filter: invert(1);
+    mix-blend-mode: exclusion;
+}
+
+.text-inverted {
+    @include textInverted;
+}

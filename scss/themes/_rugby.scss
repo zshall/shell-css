@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Rugby
+.theme-rugby {
+    --desktop: #{palette.$F6};
+    --applicationWorkspace: #{palette.$B2};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$E5};
+    --inactiveTitleBar: #{palette.$H6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$A4r};
+    --inactiveBorder: #{palette.$H6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$E5r};
+    --highlightedText: #{palette.$H6r};
+}

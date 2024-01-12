@@ -1,0 +1,87 @@
+@use '_palette';
+@use '_theme';
+@use '_fonts';
+
+$buttonShadowWidth: 2px;
+$buttonFontSize: 16px;
+
+@mixin buttonShadow($shadowWidth: $buttonShadowWidth) {
+    box-shadow: inset (-1 * $shadowWidth) (-1 * $shadowWidth) 0px theme.$buttonShadow, inset $shadowWidth $shadowWidth 0px theme.$buttonHighlight;
+}
+
+@mixin buttonBackground($shadowWidth: $buttonShadowWidth) {
+    background: theme.$buttonFace;
+    color: theme.$buttonText;
+    border: 1px solid theme.$windowFrame;
+    @include buttonShadow($shadowWidth);
+}
+
+@mixin buttonShadowInverted($shadowWidth: $buttonShadowWidth) {
+    box-shadow: inset (-1 * $shadowWidth) (-1 * $shadowWidth) 0px theme.$buttonHighlight, inset $shadowWidth $shadowWidth 0px theme.$buttonShadow;
+}
+
+.btn {
+    font-family: fonts.$system;
+    font-size: $buttonFontSize;
+    @include buttonBackground;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 3px;
+
+    &.btn-preferred {
+        border-width: 2px;
+    }
+
+    &:hover {
+        background: theme.$buttonFace;
+    }
+
+    &:active {
+        background: theme.$buttonFace;
+        color: theme.$buttonText;
+        @include buttonShadowInverted;
+    }
+
+    &:disabled {
+        color: theme.$disabledText;
+        filter: brightness(115%);
+        border: 1px solid theme.$buttonShadow;
+        cursor: not-allowed;
+
+        &:hover {
+            background: theme.$buttonFace;
+        }
+
+        &:active {
+            @include buttonShadow;
+        }
+    }
+}
+
+.btn-list {
+    list-style: none;
+    position: relative;
+    
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    a::before {
+        @include buttonBackground;
+        width: $buttonFontSize;
+        height: $buttonFontSize;
+        content: ' ';
+        display: inline-block;
+        position: absolute;
+        left: 1rem;
+    }
+
+    a:active::before {
+        @include buttonShadowInverted;
+    }
+}

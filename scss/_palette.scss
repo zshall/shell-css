@@ -1,0 +1,75 @@
+// Use RGB for full color range, dithered for 16 color simulation
+@use 'palettes/palette-dithered' as palette;
+@use 'palettes/palette-rgb' as palette-rgb;
+@use 'palettes/palette-dithered' as palette-dithered;
+
+// Default palette
+$A1: palette.$A1; $A2: palette.$A2; $A3: palette.$A3; $A4: palette.$A4; $A5: palette.$A5; $A6: palette.$A6;
+$B1: palette.$B1; $B2: palette.$B2; $B3: palette.$B3; $B4: palette.$B4; $B5: palette.$B5; $B6: palette.$B6;
+$C1: palette.$C1; $C2: palette.$C2; $C3: palette.$C3; $C4: palette.$C4; $C5: palette.$C5; $C6: palette.$C6;
+$D1: palette.$D1; $D2: palette.$D2; $D3: palette.$D3; $D4: palette.$D4; $D5: palette.$D5; $D6: palette.$D6;
+$E1: palette.$E1; $E2: palette.$E2; $E3: palette.$E3; $E4: palette.$E4; $E5: palette.$E5; $E6: palette.$E6;
+$F1: palette.$F1; $F2: palette.$F2; $F3: palette.$F3; $F4: palette.$F4; $F5: palette.$F5; $F6: palette.$F6;
+$G1: palette.$G1; $G2: palette.$G2; $G3: palette.$G3; $G4: palette.$G4; $G5: palette.$G5; $G6: palette.$G6;
+$H1: palette.$H1; $H2: palette.$H2; $H3: palette.$H3; $H4: palette.$H4; $H5: palette.$H5; $H6: palette.$H6;
+
+$colors:
+    ("A1": $A1, "A2": $A2, "A3": $A3, "A4": $A4, "A5": $A5, "A6": $A6,
+    "B1": $B1, "B2": $B2, "B3": $B3, "B4": $B4, "B5": $B5, "B6": $B6,
+    "C1": $C1, "C2": $C2, "C3": $C3, "C4": $C4, "C5": $C5, "C6": $C6,
+    "D1": $D1, "D2": $D2, "D3": $D3, "D4": $D4, "D5": $D5, "D6": $D6,
+    "E1": $E1, "E2": $E2, "E3": $E3, "E4": $E4, "E5": $E5, "E6": $E6,
+    "F1": $F1, "F2": $F2, "F3": $F3, "F4": $F4, "F5": $F5, "F6": $F6,
+    "G1": $G1, "G2": $G2, "G3": $G3, "G4": $G4, "G5": $G5, "G6": $G6,
+    "H1": $H1, "H2": $H2, "H3": $H3, "H4": $H4, "H5": $H5, "H6": $H6);
+
+// RGB Palette
+$A1r: palette-rgb.$A1; $A2r: palette-rgb.$A2; $A3r: palette-rgb.$A3; $A4r: palette-rgb.$A4; $A5r: palette-rgb.$A5; $A6r: palette-rgb.$A6;
+$B1r: palette-rgb.$B1; $B2r: palette-rgb.$B2; $B3r: palette-rgb.$B3; $B4r: palette-rgb.$B4; $B5r: palette-rgb.$B5; $B6r: palette-rgb.$B6;
+$C1r: palette-rgb.$C1; $C2r: palette-rgb.$C2; $C3r: palette-rgb.$C3; $C4r: palette-rgb.$C4; $C5r: palette-rgb.$C5; $C6r: palette-rgb.$C6;
+$D1r: palette-rgb.$D1; $D2r: palette-rgb.$D2; $D3r: palette-rgb.$D3; $D4r: palette-rgb.$D4; $D5r: palette-rgb.$D5; $D6r: palette-rgb.$D6;
+$E1r: palette-rgb.$E1; $E2r: palette-rgb.$E2; $E3r: palette-rgb.$E3; $E4r: palette-rgb.$E4; $E5r: palette-rgb.$E5; $E6r: palette-rgb.$E6;
+$F1r: palette-rgb.$F1; $F2r: palette-rgb.$F2; $F3r: palette-rgb.$F3; $F4r: palette-rgb.$F4; $F5r: palette-rgb.$F5; $F6r: palette-rgb.$F6;
+$G1r: palette-rgb.$G1; $G2r: palette-rgb.$G2; $G3r: palette-rgb.$G3; $G4r: palette-rgb.$G4; $G5r: palette-rgb.$G5; $G6r: palette-rgb.$G6;
+$H1r: palette-rgb.$H1; $H2r: palette-rgb.$H2; $H3r: palette-rgb.$H3; $H4r: palette-rgb.$H4; $H5r: palette-rgb.$H5; $H6r: palette-rgb.$H6;
+
+// Dithered Palette
+$A1d: palette-dithered.$A1; $A2d: palette-dithered.$A2; $A3d: palette-dithered.$A3; $A4d: palette-dithered.$A4; $A5d: palette-dithered.$A5; $A6d: palette-dithered.$A6;
+$B1d: palette-dithered.$B1; $B2d: palette-dithered.$B2; $B3d: palette-dithered.$B3; $B4d: palette-dithered.$B4; $B5d: palette-dithered.$B5; $B6d: palette-dithered.$B6;
+$C1d: palette-dithered.$C1; $C2d: palette-dithered.$C2; $C3d: palette-dithered.$C3; $C4d: palette-dithered.$C4; $C5d: palette-dithered.$C5; $C6d: palette-dithered.$C6;
+$D1d: palette-dithered.$D1; $D2d: palette-dithered.$D2; $D3d: palette-dithered.$D3; $D4d: palette-dithered.$D4; $D5d: palette-dithered.$D5; $D6d: palette-dithered.$D6;
+$E1d: palette-dithered.$E1; $E2d: palette-dithered.$E2; $E3d: palette-dithered.$E3; $E4d: palette-dithered.$E4; $E5d: palette-dithered.$E5; $E6d: palette-dithered.$E6;
+$F1d: palette-dithered.$F1; $F2d: palette-dithered.$F2; $F3d: palette-dithered.$F3; $F4d: palette-dithered.$F4; $F5d: palette-dithered.$F5; $F6d: palette-dithered.$F6;
+$G1d: palette-dithered.$G1; $G2d: palette-dithered.$G2; $G3d: palette-dithered.$G3; $G4d: palette-dithered.$G4; $G5d: palette-dithered.$G5; $G6d: palette-dithered.$G6;
+$H1d: palette-dithered.$H1; $H2d: palette-dithered.$H2; $H3d: palette-dithered.$H3; $H4d: palette-dithered.$H4; $H5d: palette-dithered.$H5; $H6d: palette-dithered.$H6;
+
+// Default palette is whatever you chose above.
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background: $color !important;
+    }
+}
+
+// Explicitly choosing RGB or dithered simulation requires specifying `r` at the end for RGB or `d` for dithered.
+@each $name, $color in palette-rgb.$colors {
+    .bg-#{$name}r {
+        background: $color !important;
+    }
+
+    .text-#{$name}, .text-#{$name}r, .text-#{$name}d { // all three classes use RGB since you can't dither text
+        color: $color !important;
+    }
+}
+
+@each $name, $color in palette-dithered.$colors {
+    .bg-#{$name}d {
+        background: $color;
+    }
+
+    .text-#{$name}d {
+        background: $color;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+}

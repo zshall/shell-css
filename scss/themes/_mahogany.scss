@@ -1,0 +1,26 @@
+@use "../_palette";
+
+// Theme: Mahogany
+.theme-mahogany {
+    --desktop: rgb(64, 64, 64) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAABpJREFUGFdjbOvq+19VVsTAyMDA8L+tq48BAEJkBp/lkJnmAAAAAElFTkSuQmCC);
+    --applicationWorkspace: #{palette.$F6};
+    --windowBackground: #{palette.$H6};
+    --windowText: #{palette.$A6};
+    --menuBar: #{palette.$H6};
+    --menuText: #{palette.$A6};
+    --activeTitleBar: #{palette.$A5};
+    --inactiveTitleBar: #{palette.$F6};
+    --activeTitleBarText: #{palette.$H6};
+    --inactiveTitleBarText: #{palette.$A6};
+    --activeBorder: #{palette.$F6r};
+    --inactiveBorder: #{palette.$F6r};
+    --windowFrame: #{palette.$A6};
+    --scrollBars: #{palette.$F6};
+    --buttonFace: #{palette.$F6};
+    --buttonShadow: #{palette.$D6r};
+    --buttonText: #{palette.$A6};
+    --buttonHighlight: #{palette.$H6};
+    --disabledText: #{palette.$D6};
+    --highlight: #{palette.$A4r};
+    --highlightedText: #{palette.$H6r};
+}

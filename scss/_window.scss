@@ -1,0 +1,197 @@
+@use '_palette';
+@use '_theme';
+@use '_fonts';
+
+$controlButtonWidth: 18px;
+
+.window {
+    background: theme.$windowBackground;
+    color: theme.$windowText;
+    &:not(.no-outer-border) {
+        outline: 5px solid theme.$inactiveBorder;
+        box-shadow: 0 0 0 6px theme.$windowFrame;
+    }
+    border: 1px solid theme.$windowFrame;
+    margin: 6px 6px 12px 6px;
+
+    display: flex;
+    flex-direction: column;
+
+    // A minimized window is hidden. You can put the .minimized and .maximized classes on the window at the same time, but .minimized takes priority.
+    // While hidden, an icon will be displayed on the desktop to represent the window.
+    &.minimized {
+        border: none;
+        outline: none;
+        box-shadow: none;
+        float: left;
+        background: none !important;
+        cursor: pointer;
+
+        :not(.title-bar):not(.minimize) {
+            display: none;
+        }
+        
+        // The title bar morphs into a button
+        .title-bar {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            color: theme.$highlightedText;
+            background: theme.$highlight;
+
+            .minimize {
+                display: block;
+                width: 32px;
+                height: 32px;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAYCAMAAAA1ddazAAAAAXNSR0IArs4c6QAAADNQTFRFAAAAAAAA/wAAqgBVAP8AAKpV//8AqqpVAACqAAD/qlWq/wD/VaqqAP//hoqOw8fL////hLpVIQAAABF0Uk5TAP////////////////////8QFUChAAAANklEQVQokWNgxAsYGBj5+Bh5eDEgSBiIIPKY0rxQeT4G/OYD5QXwgFH5UXlC8gTSFwMDHz4AAPTZJUiTpV3MAAAAAElFTkSuQmCC);
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+
+    &.workspace {
+        background: theme.$applicationWorkspace;
+
+        .window .title-bar .control-box::before {
+            width: 6px;
+            margin-left: 5px;
+        }
+    }
+
+    &:not(.minimized) {
+        &.active {
+            outline-color: theme.$activeBorder;
+
+            & > .title-bar {
+                background: theme.$activeTitleBar;
+                color: theme.$activeTitleBarText;
+            }
+        }
+
+        // Fill the entire available space (desktop / body tags are relative position)
+        &.maximized {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+
+            // Borders on before / after to create up and down arrows for restore down button
+            .title-bar {
+                .maximize::before {
+                    margin: 4px 5px 2px 5px;
+                }
+
+                .maximize::after {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    margin: 0 5px;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom-color: palette.$A6;
+                    border-top: 4px solid palette.$A6;
+                }
+            }
+
+            .container {
+                overflow: auto !important;
+                max-width: 100%;
+                margin: 0;
+            }
+        }
+
+        & > .title-bar {
+            background: theme.$inactiveTitleBar;
+            color: theme.$inactiveTitleBarText;
+            text-align: center;
+            position: relative;
+            flex: 0 1 auto;
+            border-bottom: 1px solid theme.$windowFrame;
+            height: theme.$titleBarHeight;
+            font-family: fonts.$system;
+            
+            vertical-align: middle;
+            line-height: $controlButtonWidth;
+
+            &:only-child {
+                border-bottom: none;
+            }
+
+            .control-box {
+                float: left;
+                background-color: palette.$F6;
+                width: $controlButtonWidth;
+                height: $controlButtonWidth;
+                border-right: 1px solid theme.$windowFrame;
+
+                // Draws the control box - sign
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 10px;
+                    height: theme.$controlBoxHeight;
+                    background-color: palette.$H6;
+                    border: 1px solid palette.$A6;
+                    margin: 7px 3px;
+                    box-shadow: 1px 1px 0px theme.$buttonShadow;
+                }
+
+                &:active, &:focus {
+                    filter: invert(1);
+                }
+            }
+
+            .minimize, .maximize {
+                float: right;
+                background: palette.$F6;
+                width: $controlButtonWidth;
+                height: $controlButtonWidth;
+                border-left: 1px solid theme.$windowFrame;
+                box-shadow: inset -1px -1px 0px theme.$buttonShadow, inset 1px 1px 0px theme.$buttonHighlight;
+                border-left: 1px solid palette.$A6;
+
+                &:active {
+                    box-shadow: inset -1px -1px 0px theme.$buttonHighlight, inset 1px 1px 0px theme.$buttonShadow;
+                }
+
+                // sets up the borders for the minimize and maximize buttons' arrows
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    margin: 7px 5px;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom-color: palette.$A6;
+                }
+            }
+
+            // up arrow
+            .maximize::before {
+                border-bottom: 4px solid palette.$A6;
+            }
+
+            // down arrow
+            .minimize::before {
+                border-top: 4px solid palette.$A6;
+            }
+        }
+    }
+    .container {
+        overflow: auto;
+        flex: 1 1 auto;
+        padding: 1rem 0;
+
+        .row {
+            padding: 0 1rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
