@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Retro CSS framework in the style of classic operating systems",
   "scripts": {
-    "build": "parcel build scss/shell.scss",
-    "watch": "parcel watch scss/shell.scss"
+    "build": "parcel build src/scss/shell.scss",
+    "watch": "parcel watch src/scss/shell.scss"
   },
   "keywords": [
     "ui-framework",

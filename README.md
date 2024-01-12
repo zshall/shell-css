@@ -34,9 +34,10 @@ get up and running.
 
 ## Building from Source
 
-Parcel is used to compile the SCSS. Clone the repository and `npm install`, then `npm run build` or `npm run watch`.
+Parcel is used to compile the SCSS. Clone the repository and `npm install`, then `npm run build` or `npm run watch` to
+build any time you make changes to the source files.
 
-The `dist` folder contains all required files.
+The `src` folder has styles, icons, etc. while `dist` contains the build output.
 
 ### Viewing the documentation site locally
 
