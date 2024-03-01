@@ -1,5 +1,7 @@
 # Shell.css
 
+[![Join us on Slack!](https://img.shields.io/badge/join_the_community-on_slack-blue)](https://join.slack.com/t/greenhillplaza/shared_invite/zt-2dq8mx6sm-3YnobHETTmxUNE02TOSPRg)
+
 [Documentation](https://zachhall.org/shell-css)
 
 [npm package](https://www.npmjs.com/package/shell-css)
