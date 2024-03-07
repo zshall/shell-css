@@ -85,3 +85,13 @@ $buttonFontSize: 16px;
         @include buttonShadowInverted;
     }
 }
+
+/**
+ * Button groups
+ * If you've got more than one button, this ensures that spacing between them will always leave a gap.
+ */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
