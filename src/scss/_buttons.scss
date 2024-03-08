@@ -28,7 +28,6 @@ $buttonFontSize: 16px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 1px;
     cursor: pointer;
     user-select: none;
     border-radius: 3px;
@@ -84,4 +83,14 @@ $buttonFontSize: 16px;
     a:active::before {
         @include buttonShadowInverted;
     }
+}
+
+/**
+ * Button groups
+ * If you've got more than one button, this ensures that spacing between them will always leave a gap.
+ */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
