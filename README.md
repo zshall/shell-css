@@ -12,6 +12,14 @@ To use in your own project, the quickest way is to install through `npm`:
 
 `npm i shell-css`
 
+### CDN Usage
+
+You can use JsDelivr to load Shell.css through a CDN instead of installing:
+
+~~~html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shell-css@1.1.0/dist/shell.css" />
+~~~
+
 ### Prerequisites
 
 [Bootstrap](https://getbootstrap.com/)'s grid is recommended, but not required. The documentation site
@@ -21,6 +29,12 @@ currently uses Bootstrap 5's **grid** only.
 
 ~~~html
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+~~~
+
+or via CDN:
+
+~~~html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2/dist/css/bootstrap-grid.min.css" />
 ~~~
 
 ## Usage
