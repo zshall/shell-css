@@ -15,6 +15,11 @@ input, select {
     color: theme.$windowText;
 }
 
+select[multiple]:focus option:checked {
+    background: theme.$highlight linear-gradient(0deg, theme.$highlight 0%, theme.$highlight 100%);
+    color: theme.$highlightedText;
+}
+
 .select-input {
     position: relative;
 
