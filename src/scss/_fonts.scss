@@ -3,6 +3,26 @@
     src: url(fonts/GenericMobileSystem.ttf);
 }
 
+@mixin systemFont {
+    font-family: $system;
+    -webkit-font-smoothing: none;
+}
+
+@mixin sansSerifFont {
+    font-family: $sansSerif;
+    -webkit-font-smoothing: initial;
+}
+
+@mixin serifFont {
+    font-family: $serif;
+    -webkit-font-smoothing: initial;
+}
+
+@mixin monospaceFont {
+    font-family: $monospace;
+    -webkit-font-smoothing: initial;
+}
+
 $system: 'System', sans-serif;
 $sansSerif: 'MS Sans Serif', sans-serif;
 $serif: 'Times', 'Times New Roman', serif;

@@ -21,7 +21,7 @@ $buttonFontSize: 16px;
 }
 
 .btn {
-    font-family: fonts.$system;
+    @include fonts.systemFont;
     font-size: $buttonFontSize;
     @include buttonBackground;
     padding: 0.5em 1em;

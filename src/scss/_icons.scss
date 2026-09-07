@@ -26,7 +26,7 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
-        font-family: fonts.$sansSerif;
+        @include fonts.sansSerifFont;
         gap: 0.2rem;
         color: theme.$windowText;
         text-decoration: none;

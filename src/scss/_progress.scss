@@ -33,7 +33,7 @@
 
     .progress-bar-text {
         color: theme.$windowText;
-        font-family: fonts.$sansSerif;
+        @include fonts.sansSerifFont;
         font-size: 0.8rem;
         position: absolute;
         left: 0;

@@ -2,18 +2,13 @@
 @use '_fonts';
 @use '_palette';
 
-* {
-    font-smooth: never;
-    --webkit-font-smoothing: none;
-}
-
 ::selection {
     background: theme.$highlight;
     color: theme.$highlightedText;
 }
 
 body {
-    font-family: fonts.$system;
+    @include fonts.systemFont;
 }
 
 .text-center {
@@ -22,31 +17,31 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
 }
 
 .font-system {
-    font-family: fonts.$system;
+    @include fonts.systemFont;
 }
 
 .font-sans-serif {
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
 }
 
 .font-serif {
-    font-family: fonts.$serif;
+    @include fonts.serifFont;
 }
 
 .font-monospace {
-    font-family: fonts.$monospace;
+    @include fonts.monospaceFont;
 }
 
 code {
-    font-family: fonts.$monospace;
+    @include fonts.monospaceFont;
 }
 
 dfn {
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
     font-style: normal;
     text-decoration: underline;
     text-decoration-style: dotted;
@@ -55,7 +50,7 @@ dfn {
 }
 
 a {
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
     color: palette.$D4r;
 
     &.no-underline {
@@ -65,7 +60,7 @@ a {
 
 .stylized-initial-letter::first-letter {
     initial-letter: 2;
-    font-family: fonts.$serif;
+    @include fonts.serifFont;
     text-shadow: 1px 1px 0px theme.$buttonShadow;
 }
 

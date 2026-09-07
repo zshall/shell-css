@@ -8,7 +8,7 @@
     border: 1px solid theme.$windowFrame;
     box-shadow: 4px 4px 0 theme.$buttonShadow;
     padding: 1rem;
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
     display: flex;
     align-items: center;
     gap: 1rem;

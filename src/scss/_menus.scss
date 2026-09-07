@@ -25,7 +25,7 @@
         a {
             background: theme.$menuBar;
             color: theme.$menuText;
-            font-family: fonts.$system;
+            @include fonts.systemFont;
             text-decoration: none;
             cursor: pointer;
         }
@@ -108,7 +108,7 @@
     padding: 2px 0.5rem;
     gap: 0.5rem;
     border-top: 1px solid theme.$windowFrame;
-    font-family: fonts.$sansSerif;
+    @include fonts.sansSerifFont;
     font-size: 0.8rem;
 
     .status-item {
