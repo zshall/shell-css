@@ -13,6 +13,7 @@ input, select {
     border: 1px solid theme.$windowFrame;
     background: theme.$windowBackground;
     color: theme.$windowText;
+    -webkit-font-smoothing: initial;
 }
 
 select[multiple]:focus option:checked {
@@ -24,7 +25,6 @@ select[multiple]:focus option:checked {
     position: relative;
 
     select {
-        @include fonts.systemFont;
         font-size: 16px;
         width: 100%;
         height: $selectBoxHeight;
