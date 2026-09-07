@@ -3,16 +3,19 @@
 @use '_fonts';
 @use '_window';
 
-$selectBoxHeight: 18px;
+$selectBoxHeight: 20px;
 
 input[type="radio"], input[type="checkbox"] {
     accent-color: theme.$windowText;
 }
 
 input, select {
+    box-sizing: border-box;
+    border-radius: 0;
     border: 1px solid theme.$windowFrame;
     background: theme.$windowBackground;
     color: theme.$windowText;
+    @include fonts.sansSerifFont;
 }
 
 select[multiple]:focus option:checked {
@@ -24,8 +27,7 @@ select[multiple]:focus option:checked {
     position: relative;
 
     select {
-        font-family: fonts.$system;
-        font-size: 16px;
+        font-size: 14px;
         width: 100%;
         height: $selectBoxHeight;
         padding-right: 16px;
@@ -88,10 +90,12 @@ select[multiple]:focus option:checked {
 }
 
 .form-control {
+    box-sizing: border-box;
     display: block;
+    width: 100%;
 
     .option-text {
-        display: inline-block;
+        display: inline;
     }
 
     &:focus-within .option-text {
