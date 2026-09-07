@@ -91,7 +91,7 @@ select[multiple]:focus option:checked {
     display: block;
 
     .option-text {
-        display: inline-block;
+        display: inline;
     }
 
     &:focus-within .option-text {
