@@ -3,7 +3,7 @@
 @use '_fonts';
 @use '_window';
 
-$selectBoxHeight: 18px;
+$selectBoxHeight: 20px;
 
 input[type="radio"], input[type="checkbox"] {
     accent-color: theme.$windowText;
@@ -27,7 +27,7 @@ select[multiple]:focus option:checked {
     position: relative;
 
     select {
-        font-size: 16px;
+        font-size: 14px;
         width: 100%;
         height: $selectBoxHeight;
         padding-right: 16px;
