@@ -10,6 +10,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 input, select {
+    box-sizing: border-box;
     border-radius: 0;
     border: 1px solid theme.$windowFrame;
     background: theme.$windowBackground;
@@ -89,7 +90,9 @@ select[multiple]:focus option:checked {
 }
 
 .form-control {
+    box-sizing: border-box;
     display: block;
+    width: 100%;
 
     .option-text {
         display: inline;
