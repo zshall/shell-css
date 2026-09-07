@@ -1,6 +1,6 @@
 {
   "name": "shell-css",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Retro CSS framework in the style of classic operating systems",
   "scripts": {
     "clean:output": "rimraf dist",
