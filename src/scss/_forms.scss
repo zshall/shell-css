@@ -15,7 +15,7 @@ input, select {
     border: 1px solid theme.$windowFrame;
     background: theme.$windowBackground;
     color: theme.$windowText;
-    -webkit-font-smoothing: initial;
+    @include fonts.sansSerifFont;
 }
 
 select[multiple]:focus option:checked {
